@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curly Hair Types</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: radial-gradient(
+          95.85% 185.87% at 3.37% 4.15%,
+          rgba(223, 210, 245, 0.8) 8.85%,
+          rgba(255, 198, 199, 0.8) 100%
+        );
+        margin: 40px 20px;
+        padding: 0;
+        /*
+        height: 100vh;
+        width: 100vw;
+        */
+        font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      h1 {
+        font-family: DM Serif Display, serif;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 54px;
+        text-align: center;
+        color: #35147b;
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        color: #ff5a5f;
+        margin-top: 10px;
+      }
+
+      img {
+        display: block;
+        margin: 30px auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 162%;
+        color: #000000;
+      }
+
+      hr {
+        margin: 30px auto;
+      }
+
+      button {
+        box-shadow: 0px 3px 10px rgba(53, 20, 123, 0.2);
+        display: block;
+        margin: 20px auto;
+        background: #ff5a5f;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 5px;
+
+        color: #ffffff;
+        font-weight: normal;
+        font-size: 16px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #ff8589;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 560px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 40px rgba(53, 20, 123, 0.15);
+        border-radius: 25px;
+        padding: 30px 60px;
+      }
+
+      .footer {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.41);
+      }
+
+      .learn-more {
+        font-family: DM Serif Display, serif;
+        font-style: italic;
+        font-size: 14px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .questionCTA {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Curly Hair Types</h1>
+      <h2>Are they all the same?</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/844/original/Hero_banner-02.png?1646798305"
+        alt="Illustration of 4 women with different types of hair: wavy, curly, coily, and kinky"
+        id="heroBanner"
+      />
+      <p>
+        While your curl pattern is usually pretty clear just from looking in the
+        mirror, listening to it makes a big difference, says hairstylist
+        <em>Shai Amiel</em>, who goes by <em>The Curl Doctor</em> on Instagram.
+        <br />
+        <br />
+        Curl types are a good blueprint for figuring out your routine. So if you
+        have major curls, you can avoid wasting time with too-weak products and
+        go for the heavy-hitting curl creams. Or vice versa—if you've got fine
+        waves, you can focus on the stuff that won't weigh them down.
+      </p>
+      <a
+        href="https://www.curlcentric.com/hair-typing-system/"
+        target="_blank"
+        class="learn-more"
+        >👉 Full article here</a
+      >
+      <p class="questionCTA">
+        Explore the characteristics of your curl pattern! 😃
+      </p>
+      <button>Let's go!</button>
+      <hr />
+      <p class="footer">Coded by <strong>Nayeli Acuña</strong></p>
+    </div>
+    <script>
+      function letsGo() {
+        let name = prompt("What is your name?");
+        let hairType = prompt(
+          "Which type looks the most like your hair pattern?",
+          "Wavy, curly, coily or kinky?"
+        );
+        hairType = hairType.toLowerCase();
+        hairType = hairType.trim();
+
+        if (hairType === "curly" || hairType === "wavy") {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = `Hi ${name},`;
+          let h2 = document.querySelector("h2");
+          h2.innerHTML = `We gathered this info just for you! 😉`;
+          document.getElementById("heroBanner").src =
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/846/original/wavy-curly-card.png?1646798321";
+          let p = document.querySelector("p");
+          p.innerHTML = `<strong>Type 2 wavy texture</strong> is not quite straight and not completely curly, with the spectrum of hair ranging from loose loops to coarse, thick S-shaped waves combined with curls. Type 2 texture is typically flatter at the root and lays close to the head, getting curlier from the ears down.
+            <br />
+            <br />
+          <strong>Type 3 hair ranges from tight, curly tendrils to light curls.</strong> It generally has a combination of different textures. Type 3 hair types are also defined as springy curls. They have more volume as well as height at the roots than type 2 hair types, which are wavy.`;
+          let button = document.querySelector("button");
+          button.innerHTML = `Find out more`;
+        } else if (hairType === "coily" || hairType === "kinky") {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = `Hi ${name},`;
+          let h2 = document.querySelector("h2");
+          h2.innerHTML = `We gathered this info just for you! 😉`;
+          document.getElementById("heroBanner").src =
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/845/original/coily-kinky-card.png?1646798313";
+          let p = document.querySelector("p");
+          p.innerHTML = `<strong>Type 4, kinky and coily are two terms that are essentially the same thing.</strong> Kinky can be interpreted as a really coily strand. The coil is the actual curl, whereas kinky has more to do with how tight that coil actually is. So, you can have a wavy coil that’s more in the 3s bracket or a tight coil that falls anywhere from 4A to 4C. 
+            <br />
+            <br />
+            It's the most fragile texture due to having the fewest cuticle layers protecting it from dryness. The top hair concerns with type 4 hair are avoiding tangles, maintaining moisture, and fighting off shrinkage.`;
+          let button = document.querySelector("button");
+          button.innerHTML = `Find out more`;
+        } else {
+          alert(`It's ok ${name}, you still look gorgeous! 🌟`);
+        }
+      }
+
+      let letsGoButton = document.querySelector("button");
+      letsGoButton.addEventListener("click", letsGo);
+    </script>
+  </body>
+</html>
