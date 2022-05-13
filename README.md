@@ -1,4 +1,6 @@
 # SheCodes-Basics-FinalProject_NayeliAcuna
+https://nayeli-acuna.github.io/shecodes-basics-final-project/
+
 Basic HTML, CSS and first approach to JavaScript
 
 Landing page created from scratch about something I'm passionate about. The page includes a user interaction.
