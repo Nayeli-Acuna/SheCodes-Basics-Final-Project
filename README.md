@@ -4,7 +4,7 @@ Basic HTML, CSS and first approach to JavaScript
 Landing page created from scratch about something I'm passionate about. The page includes a user interaction.
 
 HTML requirements 
-Include these the following HTML elements tags
+Include the following HTML elements tags
 
 h1, h2, p, div, span, strong, em, br, hr, a, img, button
 
